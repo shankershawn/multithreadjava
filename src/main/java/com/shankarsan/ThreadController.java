@@ -20,7 +20,7 @@ public class ThreadController {
 		Runner runner = new Runner();
 		long entry = Calendar.getInstance().getTimeInMillis();
 		System.out.println();
-		while(count <= 1000000000) {
+		while(count <= 10000) {
 			thread = new Thread(runner);
 			threadList.add(thread);
 			thread.start();
@@ -35,9 +35,9 @@ public class ThreadController {
 		});
 		long exit1 = Calendar.getInstance().getTimeInMillis();
 		System.out.println("First time check: " + (exit1 - entry));
-		//runner.print();
+		runner.print();
 		long exit2 = Calendar.getInstance().getTimeInMillis();
-		System.out.println("First time check: " + (exit2 - entry));
+		System.out.println("Second time check: " + (exit2 - entry));
 	}
 
 }

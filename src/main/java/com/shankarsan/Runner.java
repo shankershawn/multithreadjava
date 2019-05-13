@@ -41,14 +41,14 @@ public class Runner implements Runnable {
 	
 	public void print() {
 		Set<Entry<List<Integer>, Double>> resultMapEntry = null;
-		List<Integer> integerListPrint = null;
+		/*List<Integer> integerListPrint = null;*/
 		if(null != resultMap) {
 			resultMapEntry = resultMap.entrySet();
 			for(Entry<List<Integer>, Double> entry : resultMapEntry) {
-				integerListPrint = entry.getKey();
+				/*integerListPrint = entry.getKey();
 				for(Integer integerPrint : integerListPrint) {
 					System.out.print(integerPrint + ", ");
-				}
+				}*/
 				System.out.println("The average is " + entry.getValue());
 			}
 		}
