@@ -19,6 +19,7 @@ public class Runner implements Runnable {
 
 	private List<Integer> integerList = new ArrayList<Integer>();
 	Map<List<Integer>, Double> resultMap = new HashMap<>();
+	private int count = 0;
 	
 	/* (non-Javadoc)
 	 * @see java.lang.Runnable#run()
@@ -37,6 +38,7 @@ public class Runner implements Runnable {
 		}
 		avg = sum/integerList.size();
 		resultMap.put(new ArrayList<Integer>(integerList), avg);
+		System.out.println(++count + " threads executed - Thread Id: " + Thread.currentThread().getId());
 	}
 	
 	public void print() {

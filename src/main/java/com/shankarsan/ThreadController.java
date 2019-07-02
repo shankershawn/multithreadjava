@@ -20,7 +20,7 @@ public class ThreadController {
 		Runner runner = new Runner();
 		long entry = Calendar.getInstance().getTimeInMillis();
 		System.out.println();
-		while(count <= 10000) {
+		while(count <= 25000) {
 			thread = new Thread(runner);
 			threadList.add(thread);
 			thread.start();
